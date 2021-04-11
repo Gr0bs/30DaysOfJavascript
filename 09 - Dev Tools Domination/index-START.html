@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('Hello')
+
+    // Interpolated
+    console.log('Hello %s', ':poop:')
+
+    // Styled
+    console.log('%c I am some great txt with css', 'font-size: 20px; text-shadow: 10px 10px 0 blue;')
+
+    // warning!
+    console.warn('WARNIIING')
+
+    // Error :|
+    console.error('THIS IS AN ERROR')
+
+    // Info
+    console.info('This is a fun fact :)')
+
+    // Testing
+    console.assert(1 === 2, 'That is wrong !')
+
+    // clearing
+    // console.clear()
+
+    // Viewing DOM Elements
+    const p = document.querySelector('p')
+    console.log(p)
+    console.dir(p)
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`)
+        console.log(`this is ${dog.name}`)
+        console.log(`${dog.name} is ${dog.age} years old`)
+      console.groupEnd(`${dog.name}`)
+    })
+
+    // counting
+    let letters = ['a', 'b', 'c', 'd', 'e', 'a']
+    letters.forEach(letter => {
+      console.count(letter)
+    })
+
+    // timing
+    console.time('fetching data')
+    fetch('https://api.github.com/users/gr0bs')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data')
+        console.log(data)
+      })
+      
+    console.table(dogs)
+  </script>
+</body>
+</html>
