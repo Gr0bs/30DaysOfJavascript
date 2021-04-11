@@ -1,4 +1,6 @@
-﻿![](https://javascript30.com/images/JS3-social-share.png)
+﻿><span style="font-size:20px; color: red;"> THIS REPO/COURSE IS FROM WES BOS [https://JavaScript30.com](https://JavaScript30.com)</span>
+
+![](https://javascript30.com/images/JS3-social-share.png)
 
 # JavaScript30
 
